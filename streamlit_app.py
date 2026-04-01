@@ -50,7 +50,7 @@ st.markdown("""
         box-shadow: 0 0 15px rgba(102, 126, 234, 0.5) !important;
     }
     
-    /* ID Card in Sidebar */
+    /* Centered ID Card */
     .id-card {
         background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0));
         backdrop-filter: blur(12px);
@@ -59,8 +59,9 @@ st.markdown("""
         border: 1px solid rgba(255, 255, 255, 0.1);
         box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
         padding: 24px;
-        margin-top: 10px;
-        text-align: left;
+        margin: 0 auto 40px auto;
+        max-width: 400px;
+        text-align: center;
         color: white;
     }
     .id-card h3 { 
@@ -113,21 +114,17 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Student Details Sidebar
-with st.sidebar:
-    st.markdown("""
-    <div class="id-card">
-        <h3>STUDENT ID</h3>
-        <p class="id-name">A ANIS FATHIMA</p>
-        <hr style="border-color: rgba(255,255,255,0.1); margin: 20px 0;">
-        <p><b>Registration No:</b> RA2511026050314</p>
-        <p><b>Class / Sec:</b> AIML / A</p>
-        <p><b>Year / Sem:</b> I / II</p>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    st.markdown("<br><hr style='border-color: rgba(255,255,255,0.1);'><br>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align:center; color: #718096; font-size: 0.85rem;'>Powered by RDKit & Streamlit</p>", unsafe_allow_html=True)
+# Student Details Centered
+st.markdown("""
+<div class="id-card">
+    <h3>STUDENT ID</h3>
+    <p class="id-name">A ANIS FATHIMA</p>
+    <hr style="border-color: rgba(255,255,255,0.1); margin: 20px 0;">
+    <p><b>Registration No:</b> RA2511026050314</p>
+    <p><b>Class / Sec:</b> AIML / A</p>
+    <p><b>Year / Sem:</b> I / II</p>
+</div>
+""", unsafe_allow_html=True)
 
 # Input section
 st.markdown("### 🔬 Analyze Molecule")
