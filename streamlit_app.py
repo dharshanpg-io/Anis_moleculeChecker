@@ -143,16 +143,32 @@ with col1:
         smiles_to_analyze = "CC[C@@H]1[C@@H]([C@@H]([C@H](C(=O)[C@@H](C[C@@]([C@@H]([C@H]([C@@H]([C@H](C(=O)O1)C)O)C)O)(C)O)C)C)O)C"
         run_analysis = True
         clicked_example = "Erythronolide B"
-with col2:
-    if st.button("🌿 Artemisinin"):
-        smiles_to_analyze = "CC1CCC2C(C1)C3CCC4=CC(=O)OC5C4C3(C2O5)O"
-        run_analysis = True
-        clicked_example = "Artemisinin"
-with col3:
-    if st.button("💊 Antibiotic Structure"):
-        smiles_to_analyze = "CC(C)CC1C(=O)NC(C(=O)NC(C(=O)O)C(C)O)C(C)C"
-        run_analysis = True
-        clicked_example = "Antibiotic Structure"
+
+st.markdown("---")
+st.markdown("### 📚 Educational Guide: Stereochemistry Basics")
+with st.expander("What is Stereochemistry & Chirality?"):
+    st.markdown("""
+    **Stereochemistry** is the study of the spatial arrangement of atoms within molecules. **Stereoisomers** have the same sequence of bonded atoms but differ in how these atoms are oriented in three-dimensional space.
+    
+    A central concept is **chirality** (handedness). A molecule is chiral if it cannot be superimposed on its mirror image, just like your left and right hands. In organic chemistry, a carbon atom bonded to four different groups forms a typical **chiral center** (stereocenter).
+    """)
+
+with st.expander("Determining R/S Configuration (CIP Rules)"):
+    st.markdown("""
+    The absolute configuration of a chiral center is determined using the **Cahn-Ingold-Prelog (CIP)** rules:
+    
+    1. **Assign Priorities**: Rank the four atoms directly attached to the chiral center by atomic number (highest atomic number = priority 1; lowest = priority 4).
+    2. **Break Ties**: If a tie occurs, examine the next atoms along the chain until a difference is found. Double/triple bonds are treated as multiple single bonds to the same atom.
+    3. **Orient the Molecule**: Mentally rotate the molecule so the lowest priority group (usually Hydrogen, priority 4) points directly *away* from you.
+    4. **Determine Direction**: Draw a curve passing from priority 1 → 2 → 3:
+       - If the curve is **Clockwise**, the configuration is **R** (*Rectus* - right).
+       - If the curve is **Counter-clockwise**, the configuration is **S** (*Sinister* - left).
+    """)
+
+with st.expander("About the Example Compound"):
+    st.markdown("""
+    - **Erythronolide B**: The macrocyclic lactone core of Erythromycin (a broad-spectrum antibiotic). Its array of precisely-oriented chiral centers dictates its highly specific 3-dimensional shape, which is essential for binding tightly to bacterial ribosomes.
+    """)
 
 # Also trigger analysis if user types and presses enter
 if smiles_input and smiles_input != "":
