@@ -116,13 +116,9 @@ st.markdown("""
 
 # Student Details Centered
 st.markdown("""
-<div class="id-card">
-    <h3>STUDENT ID</h3>
-    <p class="id-name">A ANIS FATHIMA</p>
-    <hr style="border-color: rgba(255,255,255,0.1); margin: 20px 0;">
-    <p><b>Registration No:</b> RA2511026050314</p>
-    <p><b>Class / Sec:</b> AIML / A</p>
-    <p><b>Year / Sem:</b> I / II</p>
+<div class="id-card" style="padding: 10px; margin-bottom: 20px;">
+    <p class="id-name" style="font-size: 1.2rem; margin-bottom: 5px;">A ANIS FATHIMA</p>
+    <p style="margin: 2px 0;"><b>Reg No:</b> RA2511026050314 | <b>Class:</b> AIML / A | <b>Year:</b> I / II</p>
 </div>
 """, unsafe_allow_html=True)
 
